@@ -23,9 +23,9 @@ El proyecto presenta los siguientes comandos:
 
 Durante el desarrollo se trabaja sobre la carpeta `src/`, donde se encuentra el archivo raíz `index.js`, el `html` y assets que se usaran en el proyecto. Ese archivo raíz es el que usa Webpack como punto de partida para construir su grafo de dependencias y compilar el proyecto para su acceso via el servidor local o la carpeta `dist/` mencionada. Webpack es un herramienta excelente y se recomienda la lectura de al menos sus [conceptos básicos](https://webpack.js.org/concepts/).
 
-### Algunas características 📄
+## Algunas características 📄
 
----
+
 #### Conversión de Javascript ES6 con [Babel](https://babeljs.io)
 
 Podes usar las características de Javascript más recientes, Babel se encarga de convertirlo para que sea compatible con cualquier buscador.
