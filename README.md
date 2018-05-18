@@ -31,10 +31,10 @@ A fin de dar un ejemplo de uso el repositorio por defecto implementa el clásico
 
 ![](./docs/helloTriangle.png)
 
-> Para un ejemplo mas avanzado con manejo de texturas, modelos 3D y librerías externas referirse a este demo. 
+> Para un ejemplo mas avanzado con manejo de texturas, modelos 3D y librerías externas referirse a este [demo](https://github.com/AgustinBrst/WebGL-StarterPack-Box-Demo). 
 
 
-## Algunas características 📄
+## Algunos beneficios 📄
 
 
 ### Conversión de Javascript ES6 con [Babel](https://babeljs.io)
@@ -70,7 +70,7 @@ Detectá errores triviales antes de llegar a la consola del buscador (requiere s
 ### ¿ glMatrix ? Por supuesto
 Librería para manejo de vectores y matrices pre-instalada y lista para usarse.
 
-### Conversion a base 64 para lidiar con CORS
+### Conversion a base 64
 Opción para convertir imágenes a base 64 agregando `-- --env.base64` al final de cualquiera de las opciones de ejecución (e.g. __`npm run dev -- --env.base64`__). 
 
 > ⚠️ La conversion es innecesaria si al proyecto se lo va a publicar en un servidor, cumple la función de esquivar las restricciones definidas en varios buscadores y facilita el compartir proyectos (con abrir el `.html` alcanza) pero puede generar archivos `.js` muy grandes (pensar que las imágenes que estarían en una carpeta `assets` pasan a formar parte del código en forma de texto).
