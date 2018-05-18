@@ -23,6 +23,8 @@ El proyecto presenta los siguientes comandos:
 
 Durante el desarrollo se trabaja sobre la carpeta `src/`, donde se encuentra el archivo raíz `index.js`, el `html` y assets que se usaran en el proyecto. Ese archivo raíz es el que usa Webpack como punto de partida para construir su grafo de dependencias y compilar el proyecto para su acceso via el servidor local o la carpeta `dist/` mencionada. Webpack es un herramienta excelente y se recomienda la lectura de al menos sus [conceptos básicos](https://webpack.js.org/concepts/).
 
+![](./docs/webpack.png)
+
 ## Demo 
 
 A fin de dar un ejemplo de uso el repositorio por defecto implementa el clásico _Hello Triangle_. 
@@ -64,6 +66,9 @@ Se puede escribir CSS sin tener en cuenta en que buscador se va a abrir el proye
 Detectá errores triviales antes de llegar a la consola del buscador (requiere soporte del editor - e.g. SublimeLinter para SublimeText).
 
 ![](./docs/eslint.png)
+
+### ¿ glMatrix ? Por supuesto
+Librería para manejo de vectores y matrices pre-instalada y lista para usarse.
 
 ### Conversion a base 64 para lidiar con CORS
 Opción para convertir imágenes a base 64 agregando `-- --env.base64` al final de cualquiera de las opciones de ejecución (e.g. __`npm run dev -- --env.base64`__). 
