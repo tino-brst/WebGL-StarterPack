@@ -7,8 +7,6 @@ Punto de partida para el desarrollo de proyectos con WebGL, aprovechando el pode
 
 ### Instalación
 
-
-
 Desde el terminal:
 
 1. Ir a la carpeta donde se quiera que quede el proyecto.
