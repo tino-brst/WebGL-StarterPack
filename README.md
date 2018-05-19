@@ -7,9 +7,25 @@ Punto de partida para el desarrollo de proyectos con WebGL, aprovechando el pode
 
 ### Instalación
 
-1. Descargar el [zip del repositorio](https://github.com/AgustinBrst/WebGL-StarterPack/archive/master.zip).
-2. Descomprimirlo donde se quiera que quede el proyecto.
-3. Desde la carpeta del proyecto ejecutar `npm install` para instalar todas las dependencias.
+
+
+Desde el terminal:
+
+1. Ir a la carpeta donde se quiera que quede el proyecto.
+
+   __`cd carpeta/destino`__
+   
+2. Clonar el respositorio
+
+   __`git clone https://github.com/AgustinBrst/WebGL-StarterPack.git`__
+   
+3. Ir a la carpeta generada
+
+   __`cd WebGL-StarterPack`__
+   
+4. Instalar dependencias
+
+   __`npm install`__
 
 ### Uso
 
@@ -27,7 +43,7 @@ Durante el desarrollo se trabaja sobre la carpeta `src/`, donde se encuentra el 
 
 ## Demo 
 
-A fin de dar un ejemplo de uso el repositorio por defecto implementa el clásico _Hello Triangle_. 
+A fin de dar un ejemplo de uso, el repositorio por defecto implementa el clásico _Hello Triangle_. 
 
 ![](./docs/helloTriangle.png)
 
@@ -47,7 +63,7 @@ Podes usar las características de Javascript más recientes, Babel se encarga d
 
 Ante cualquier cambio en un archivo el buscador se refresca automáticamente. Chau `Ctrl + F5`.
 
-<img style="border-radius: 5px;" src="./docs/liveReloading.gif">
+![](./docs/liveReloading.gif)
 
 ### Shaders / Texturas / Modelos 3D en su lugar
 
