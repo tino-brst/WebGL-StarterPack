@@ -1,7 +1,11 @@
-attribute vec4 a_Position;
-attribute vec4 a_Color;
-varying vec4 v_Color;
+#version 300 es
+
+in vec4 vertexPosition;
+in vec3 vertexColor;
+
+out vec3 fragmentColor;
+
 void main() {
-	v_Color = a_Color;
-	gl_Position = a_Position;
+	fragmentColor = vertexColor;
+	gl_Position = vertexPosition;
 }
