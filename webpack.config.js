@@ -4,17 +4,17 @@ var path = require("path")
 
 //    Entry Point  ------>  Loaders  ------>  Output
 //        |                    |                |
-//    [src/...]     [babel, eslint, etc]   [dist/...]
-//   🏞 📑 🏙 📄              🛠              📄✨
+//    [src/...]      [ts, glsl, obj, etc]   [dist/...]
+//   🏞 📑 🏙 📄             🛠              📄✨
 
 module.exports = (env = {}) => {
 	return {
 		// Punto de entrada
-		entry: "./src/index.js",
+		entry: "./src/index.ts",
 		// Loaders
 		module: {
 			rules: [
-				{ 
+				{
 					test: /\.glsl$/,
 					use: "webpack-glsl-loader"
 				},
@@ -22,25 +22,14 @@ module.exports = (env = {}) => {
 					test: /\.obj$/,
 					use: "webpack-obj-loader"
 				},
-				{	
-					enforce: "pre",				// 	<- 	establezco orden explicito entre loaders de archivos .js 
-					test: /\.js$/,				// 		primero eslint, despues babel
-					exclude: /node_modules/,
-					use: "eslint-loader"
-				},
 				{
-					test: /\.js$/,
-					exclude: /node_modules/,
-					use: {
-						loader: "babel-loader",
-						options: {
-							presets: ["babel-preset-env"]
-						}
-					}
+					test: /\.tsx?$/,
+					use: 'ts-loader',
+					exclude: /node_modules/
 				},
 				{
 					test: /\.css$/,
-					use: ["style-loader", "css-loader", "postcss-loader"]
+					use: ["style-loader", "css-loader" ]
 				},
 				{
 					test: /\.(png|jpe?g)$/,
@@ -82,13 +71,13 @@ module.exports = (env = {}) => {
 function getImageLoader(env) {
 	if (env.base64) {
 		// Conversion a base64 para lidiar con las restricciones en buscadores (CORS)
-		return { 
+		return {
 			loader: "base64-image-loader"
 		}
 	} else {
 		// Generacion estandar de archivos (cuando ya se va a correr en servidor)
 		return {
-			loader: "file-loader",			
+			loader: "file-loader",
 			options: {
 				name: "[name].[ext]",
 				useRelativePath: true
