@@ -4,6 +4,7 @@ import fragmentShaderSource from "./shaders/shader.frag.glsl"
 
 window.onload = () => {
 
+	// Rendering context setup
 	var canvas = document.getElementById("webgl") as HTMLCanvasElement
 	var gl = canvas.getContext("webgl2") as WebGLRenderingContext
 

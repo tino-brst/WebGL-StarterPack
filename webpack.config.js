@@ -9,7 +9,7 @@ var path = require("path")
 
 module.exports = (env = {}) => {
 	return {
-		// Punto de entrada
+		// Entry Point
 		entry: "./src/index.ts",
 		// Loaders
 		module: {
@@ -49,12 +49,12 @@ module.exports = (env = {}) => {
 				template: "src/index.html"
 			})
 		],
-		// Otras configuraciones
+		// Other Settings
 		devtool: env.prod ?  "source-map" : "eval-source-map",
 		devServer: {
-			// host: "0.0.0.0",			// <- host
-			contentBase: "./dist",		//   "0.0.0.0": accesible desde la red en [IP del equipo]:[Puerto] (requiere coneccion)
-			stats: "minimal",			//   "localhost" (valor por defecto): no accesible desde la red, pero no requiere coneccion a internet
+			host: "localhost",
+			contentBase: "./dist",
+			stats: "minimal",
 			overlay: false
 		},
 		stats: {
@@ -67,15 +67,15 @@ module.exports = (env = {}) => {
 	}
 }
 
-// Seleccion de loader para imagenes (segun variable de entorno env.base64)
+// Select image loader depending on environment variable env.base64
 function getImageLoader(env) {
 	if (env.base64) {
-		// Conversion a base64 para lidiar con las restricciones en buscadores (CORS)
+		// base64 conversion to deal with browser restrictions (CORS)
 		return {
 			loader: "base64-image-loader"
 		}
 	} else {
-		// Generacion estandar de archivos (cuando ya se va a correr en servidor)
+		// default image loading (intended for server use)
 		return {
 			loader: "file-loader",
 			options: {
