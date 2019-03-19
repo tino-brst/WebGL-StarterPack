@@ -4,7 +4,7 @@ var path = require("path")
 
 //    Entry Point  ------>  Loaders  ------>  Output
 //        |                    |                |
-//    [src/...]      [ts, glsl, obj, etc]   [dist/...]
+//     src/...      .ts, .glsl, .obj, etc     dist/...
 //   🏞 📑 🏙 📄             🛠              📄✨
 
 module.exports = (env = {}) => {

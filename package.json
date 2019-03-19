@@ -9,6 +9,7 @@
 	"author": "Agustin Burset",
 	"license": "ISC",
 	"devDependencies": {
+		"@types/webgl2": "0.0.4",
 		"base64-image-loader": "1.2.1",
 		"clean-webpack-plugin": "0.1.19",
 		"css-loader": "0.28.11",

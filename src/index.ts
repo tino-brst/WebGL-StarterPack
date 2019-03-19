@@ -6,7 +6,7 @@ window.onload = () => {
 
 	// Rendering context setup
 	var canvas = document.getElementById("webgl") as HTMLCanvasElement
-	var gl = canvas.getContext("webgl2") as WebGLRenderingContext
+	var gl = canvas.getContext("webgl2") as WebGL2RenderingContext
 
 	// Shaders setup
 	var vertexShader = gl.createShader(gl.VERTEX_SHADER)
