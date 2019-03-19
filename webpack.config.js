@@ -2,14 +2,14 @@ var HtmlWebpackPlugin = require("html-webpack-plugin")
 var CleanWebpackPlugin = require("clean-webpack-plugin")
 var path = require("path")
 
-//    Entry Point  ------>  Loaders  ------>  Output
+// Punto de Entrada  ---->  Loaders  ------>  Salida
 //        |                    |                |
 //     src/...      .ts, .glsl, .obj, etc     dist/...
 //   🏞 📑 🏙 📄             🛠              📄✨
 
 module.exports = (env = {}) => {
 	return {
-		// Entry Point
+		// Punto de Entrada
 		entry: "./src/index.ts",
 		// Loaders
 		module: {
@@ -37,7 +37,7 @@ module.exports = (env = {}) => {
 				}
 			]
 		},
-		// Output
+		// Salida
 		output: {
 			filename: "app.js",
 			path: path.resolve(__dirname, "dist")
@@ -49,7 +49,7 @@ module.exports = (env = {}) => {
 				template: "src/index.html"
 			})
 		],
-		// Other Settings
+		// Otras configuraciones
 		devtool: env.prod ?  "source-map" : "eval-source-map",
 		devServer: {
 			host: "localhost",
@@ -67,15 +67,15 @@ module.exports = (env = {}) => {
 	}
 }
 
-// Select image loader depending on environment variable env.base64
+// Se selecciona el loader de imagenes dependiendo de la variable de entorno env.base64
 function getImageLoader(env) {
 	if (env.base64) {
-		// base64 conversion to deal with browser restrictions (CORS)
+		// conversion a base64 para lidiar con las restricciones de los buscadores y su acceso a archivos locales (CORS)
 		return {
 			loader: "base64-image-loader"
 		}
 	} else {
-		// default image loading (intended for server use)
+		// carga de imagenes por defecto (para uso con servidor)
 		return {
 			loader: "file-loader",
 			options: {
