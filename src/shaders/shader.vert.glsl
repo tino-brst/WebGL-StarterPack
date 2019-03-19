@@ -1,11 +1,11 @@
 #version 300 es
 
-in vec4 vertexPosition;
+in vec2 vertexPosition;
 in vec3 vertexColor;
 
-out vec3 fragmentColor;
+out vec3 color;
 
 void main() {
-	fragmentColor = vertexColor;
-	gl_Position = vertexPosition;
+	color = vertexColor;
+	gl_Position = vec4(vertexPosition, 0, 1);
 }
